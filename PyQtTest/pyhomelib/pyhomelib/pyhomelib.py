@@ -21,7 +21,7 @@ def main():
     app = QtWidgets.QApplication(sys.argv)
 
     from mainwindow import MainWindow
-    if not QtSql.QSqlDatabase.drivers().contains("QSQLITE"):
+    if not QtSql.QSqlDatabase.drivers().contains("QODBC"):
         raise (Exception, "Fatal error: QSQLITE database driver is not found!")
 
     qttranslator = QtCore.QTranslator()
